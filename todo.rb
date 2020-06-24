@@ -47,6 +47,10 @@ helpers do
   end
 end
 
+after do
+  @storage.disconnect
+end
+
   private
 
   def next_element_id(elements)
