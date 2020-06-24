@@ -81,6 +81,10 @@ class DatabasePersistance
     query(sql, list_id)
   end
 
+  def disconnect
+    @db.close
+  end
+
 private
 
   def find_a_lists_todos(list_id)
@@ -93,7 +97,5 @@ private
     end
   end
 
-  def disconnect
-    @db.close
-  end
+
 end
